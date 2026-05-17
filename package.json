@@ -1,0 +1,18 @@
+{
+  "name": "blackbook-bot",
+  "version": "1.0.0",
+  "description": "Ambassador program blackbook bot for Discord",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "sql.js": "^1.10.3",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3"
+  }
+}
