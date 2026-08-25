@@ -113,3 +113,36 @@ All tasks, claims and submissions are stored in `data/blackbook.db`. Back this f
 | **v1.2.0** | `/unclaim`, `/cleartasks` confirmation prompt, database migration fix |
 | **v1.3.0** ⭐ *recommended for general use* | Discord native timestamps, `/mytasks`, duplicate claim prevention, button number fix |
 | **v1.4.0** | Cubs/Ambassador two-tier system, graduation mechanic, role gates — tailored for tiered programs |
+
+
+---
+
+
+**Privacy Policy — BlackBook Bot**
+_Last updated: May 2026_
+
+BlackBook Bot is an open source Discord bot developed and maintained by the BAT Ambassador Program team.
+Source code: https://github.com/Guilherme-Pantoja/BlackBook-Bot
+
+---
+
+**What we store**
+The bot stores only what is necessary to run the task system: your Discord User ID, your username,
+tasks you claim, and proof submissions you make. No emails, real names, passwords, or payment
+information are ever collected.
+
+**How it's used**
+Your data is used exclusively to operate the BlackBook — tracking task claims, routing submissions
+for admin review, and sending you DM notifications about deadlines and submission outcomes. Nothing else.
+
+**Where it's stored**
+All data lives in a local SQLite database on the hosting server. It is not publicly accessible
+and is never shared with or sold to third parties.
+
+**Deletion**
+Admins can clear task and claim data at any time. To request deletion of your personal data,
+contact the BAT Ambassador Program team directly via Discord.
+
+**Third parties**
+The bot runs on Discord and is hosted on Railway. Their respective privacy policies apply:
+discord.com/privacy — railway.app/legal/privacy
