@@ -10,7 +10,7 @@ import {
   getTasksByCategory, getTaskById, claimTask, getClaimCount,
   getSubmission, approveSubmission, rejectSubmission,
   unclaimTask, clearTasksByCategory, clearAllTasks,
-  hasActiveClaimOnTask, getApprovedSubmissionCount,
+  hasActiveClaimOnTask, hasApprovedSubmission, getApprovedSubmissionCount,
 } from '../utils/database.js';
 
 export async function handleButton(interaction, client) {
@@ -67,6 +67,9 @@ export async function handleButton(interaction, client) {
 
     const alreadyClaimed = await hasActiveClaimOnTask(taskId, interaction.user.id);
     if (alreadyClaimed) return interaction.editReply('⚠️ You already have this task claimed! Use `/mytasks` to check your active tasks.');
+
+    const alreadyCompleted = await hasApprovedSubmission(taskId, interaction.user.id);
+    if (alreadyCompleted) return interaction.editReply('✅ You\'ve already completed this task! Pick a different one to keep growing.');
 
     if (task.slots) {
       const count = await getClaimCount(taskId);

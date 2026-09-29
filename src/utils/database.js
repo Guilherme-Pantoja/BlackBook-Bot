@@ -156,6 +156,16 @@ export async function hasActiveClaimOnTask(taskId, userId) {
   return !!row;
 }
 
+export async function hasApprovedSubmission(taskId, userId) {
+  await getDb();
+  const row = queryOne(`
+    SELECT s.id FROM submissions s
+    JOIN claims c ON s.claim_id = c.id
+    WHERE c.task_id = ? AND c.user_id = ? AND s.status = 'approved'
+  `, [taskId, userId]);
+  return !!row;
+}
+
 export async function getClaimsForTask(taskId) {
   await getDb();
   return queryAll('SELECT * FROM claims WHERE task_id = ? ORDER BY claimed_at ASC', [taskId]);

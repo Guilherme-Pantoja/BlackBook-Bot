@@ -23,8 +23,8 @@ export async function execute(interaction) {
     const gateEmbed = new EmbedBuilder()
       .setTitle('📖  The Blackbook')
       .setDescription(
-        'You do not have access to the Blackbook yet.\\n\\n' +
-        'The Blackbook is available to **Cubs** and **Ambassadors** of the BAT Community program.\\n\\n' +
+        'You do not have access to the Blackbook yet.\n\n' +
+        'The Blackbook is available to **Cubs** and **Ambassadors** of the BAT Community program.\n\n' +
         'If you believe this is a mistake, please contact a team member.'
       )
       .setColor(0xED4245)
